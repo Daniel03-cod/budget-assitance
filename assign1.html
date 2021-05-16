@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Golist</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<center>
+		<div id="frame">
+			<div><h3 id="title">Golist</h3></div>
+			<table>
+			<p>BUDGET: <input type="number" disabled id="budget"></p>
+			<tr id="roll1">
+				<td><input type="text" value="ITEM" disabled></td>
+				<td><input type="text" value="AMOUNT" disabled></td>
+			</tr>
+
+			<tr>
+				<td><input type="text" id="item1"></td>
+				<td><input type="number" id="price1"></td>
+			</tr>
+
+	
+			</table>
+			<div id="dashboardframe">
+				<div><h4>DashBoard</h4></div>
+				<p>Spent:   <input type="number" id="totalbal" disabled></p>
+				<p>Bal:    <input type="number" id="bal" disabled></p>
+				<p>SET BUDGET<input id="setbudget"> <button onclick="setBudget()">SET</button></p>
+			</div>
+			<div id="finalbtn">
+				<button onclick="work()">GOsave</button>
+			</div>
+		</div>
+		<div id="display">
+			
+		</div>
+	</center>
+
+
+
+	<script type="text/javascript">
+			var a = price1.value;
+			var b = item1.value;
+			var bb;
+		function setBudget() {
+			budget.value = setbudget.value;
+			setbudget.value = null;
+		}
+		function work(){
+			var a = price1.value; 
+			bb = {item: item1.value, price: price1.value};
+			bal.value = budget.value - a;
+			budget.value = bal.value;
+			console.log(bb);
+		}
+		
+	</script>
+</body>
+</html>
